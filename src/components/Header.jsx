@@ -31,25 +31,26 @@ function Header() {
     
     
     return (
-        <header className='flex items-center justify-between lg:h-[96px]'>
+        <header className='relative flex items-center justify-between lg:h-[96px]'>
             <button><img src={logo} height={40} alt="" /></button>
-            <hr className='text-red-700 lg:w-[473px] md:w-0'/>
-
-            <section>
+            <>
                 {state.screenWidth> 768?
-                <NavItems/>:
+                <div className='flex'>
+                    <hr className='text-red-700 w-[473px] md:w-0'/>
+                    <NavItems/>
+                </div>:
                 <>{
                     state.clicked?
                     null:
                     <button onClick={() => dispatch({type: "SET_CLICKED", payload: !state.clicked})}><img src={menuBar} alt="" /></button>
                 }</>
             }
-            </section>
+            </>
             {state.clicked?
-            <>
-            <button><img src={close} onClick={() => dispatch({type: "SET_CLICKED", payload: !state.clicked})} alt="" /></button>
-            <NavItems/>
-            </>:
+            <div className='absolute right-0 top-0 flex flex-col gap'>
+                <button><img src={close} onClick={() => dispatch({type: "SET_CLICKED", payload: !state.clicked})} alt="" /></button>
+                <NavItems/>
+            </div>:
             null}
         </header>
     );
