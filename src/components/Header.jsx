@@ -1,30 +1,26 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import logo from '../assets/logo.png';
 import menuBar from '../assets/menuBar.svg';
+import NavItems from './NavItems';
 
-function NavBar() {
+function Header() {
     const [menu, setMenu] = useState(false);
     const toggleMenu = () => {
         setMenu(!menu);
     }
     return (
-        <nav className='flex items-center justify-between lg:h-[96px]'>
+        <header className='flex items-center justify-between lg:h-[96px]'>
             <button><img src={logo} height={40} alt="" /></button>
             <hr className='text-red-700 lg:w-[473px] md:w-0'/>
             {menu ?
-            <ul className='flex flex-col justify-evenly md:flex-row lg:gap-[2rem] md:gap-[1rem]  lg:w-[830px]'>
-                <li>00 HOME</li>
-                <li>01 DESTINATION</li>
-                <li>02 CREW</li>
-                <li>03 TECHNOLOGY</li>
-            </ul>
+            <NavItems/>
             :
             <button onClick={toggleMenu}>
                 <img src={menuBar} height={21} width={24} alt="" />
             </button>
             }
-        </nav>
+        </header>
     );
 }
 
-export default NavBar;
+export default Header;
