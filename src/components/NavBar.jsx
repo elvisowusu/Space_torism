@@ -12,7 +12,7 @@ function NavBar() {
             <button><img src={logo} height={40} alt="" /></button>
             <hr className='text-red-700 lg:w-[473px] md:w-0'/>
             {menu ?
-            <ul className='flex flex-col justify-evenly gap-[2rem]  lg:w-[830px]'>
+            <ul className='flex flex-col justify-evenly md:flex-row lg:gap-[2rem] md:gap-[1rem]  lg:w-[830px]'>
                 <li>00 HOME</li>
                 <li>01 DESTINATION</li>
                 <li>02 CREW</li>
