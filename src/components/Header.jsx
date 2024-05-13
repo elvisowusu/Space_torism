@@ -38,7 +38,7 @@ function Header() {
                 <div className='hidden md:block h-[100%]'><NavItems/></div>
                 <button className='z-20 md:hidden' onClick={() => dispatch({type: "SET_CLICKED", payload: !state.clicked})}><img src={!state.clicked? menuBar:close} alt="" /></button>
             {state.clicked?
-            <div className={`z-10 absolute right-0 top-0 flex flex-col gap bg-[#1f232d] opacity-90 w-[70%] h-[100vh] pt-[7rem] pl-[2rem]`}>
+            <div className={`z-10 absolute right-0 top-0 flex flex-col gap bg-[#1f232d] opacity-90 w-[67.5%] h-[100vh] pt-[7rem] pl-[2rem]`}>
                 <NavItems />
             </div>:
             null}

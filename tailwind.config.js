@@ -10,6 +10,9 @@ export default {
       'bellefair': ['Bellefair', 'serif'],
       'barlowCondensed': ['Barlow Condensed', 'sans-serif'],
     },
+    animation:{
+      ping: 'ping 2s infinite',
+    },
     extend: {},
   },
   plugins: [],

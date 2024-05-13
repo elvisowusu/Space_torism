@@ -5,7 +5,7 @@ import Home from "./components/Home"
 function App() {
 
   return (
-    <div className="h-[100vh]">
+    <div className={`bg-[url(src/assets/homeBackground.jpg)] bg-no-repeat bg-cover h-screen`}>
       <Header/>
       <Home/>
     </div>
