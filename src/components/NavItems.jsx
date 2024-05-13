@@ -4,7 +4,7 @@
 function NavItems() {
     const items = [' HOME', ' DESTINATION', ' CREW', ' TECHNOLOGY'];
     return (
-        <nav className="relative h-full md:pb-5 lg:pl-[1rem] lg:pr-[5rem] lg:z-10">
+        <nav className="relative h-full md:pb-5 lg:pb-0 lg:pl-[1rem] lg:pr-[5rem] lg:z-10">
             <div className="absolute invisible md:visible h-full w-full md:bg-[#979797] opacity-5"></div>
             <ul className='flex flex-col justify-evenly md:items-center md:flex-row gap-[2rem] text-[#FFFFFF] font-barlowCondensed md:gap-[1rem] lg:gap-[2rem] md:w-[32rem] md:opacity-70 md:h-[100%] lg:w-[830px]'>
                 {items.map((item, index) => (
