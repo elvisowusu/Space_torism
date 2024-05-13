@@ -41,10 +41,9 @@ function Header() {
                 </div>:
                     <button className='z-20' onClick={() => dispatch({type: "SET_CLICKED", payload: !state.clicked})}><img src={!state.clicked? menuBar:close} alt="" /></button>
                 } */}
-            <div className='flex hidden md:block'>
-                    <hr className='text-red-700 lg:w-[473px] hidden'/>
-                    <NavItems/>
-                </div>
+            
+                <hr className='text-red-700 lg:w-[473px] hidden lg:block'/>
+                <div className='hidden md:block h-[5rem]'><NavItems/></div>
                 <button className='z-20 md:hidden' onClick={() => dispatch({type: "SET_CLICKED", payload: !state.clicked})}><img src={!state.clicked? menuBar:close} alt="" /></button>
             {state.clicked?
             <div className={`z-10 absolute right-0 top-0 flex flex-col gap bg-[#1f232d] opacity-90 w-[70%] h-[100vh] pt-[7rem] pl-[2rem]`}>
