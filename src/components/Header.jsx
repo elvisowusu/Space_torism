@@ -1,8 +1,8 @@
 import { useEffect, useReducer } from 'react';
-import logo from '../assets/logo.svg';
-import menuBar from '../assets/menuBar.svg';
+import logo from '../assets/shared/logo.svg';
+import menuBar from '../assets/shared/menuHamburger.svg';
 import NavItems from './NavItems';
-import close from '../assets/close.svg';
+import close from '../assets/shared/close.svg';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
